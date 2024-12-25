@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "4721716b-b946-4a6d-a146-9cc4539af245",
+		"name": "MicroServices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26379454"
+	},
+	"item": [
+		{
+			"name": "Uber_Micro_Shreyians_Yt_Tutorials",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Create User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"prj\",\r\n    \"email\":\"{{$randomEmail}}\",\r\n    \"username\":\"{{$randomUserName}}\",\r\n    \"password\":\"qwertyuiop\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/v1/user/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY3ZTE2Mjk0YThmZmRlNWM3Yzg1ZDIiLCJpYXQiOjE3MzQ4NjEyODQsImV4cCI6MTczNDg2NDg4NH0.fo5oEKaQpjiuiHtRqtZ8Z6iiaG7C4pLqLMU-luCGA2w",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/user/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"Krystina_Botsford@hotmail.com\",\r\n    \"password\":\"qwertyuiop\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Accepted Ride",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY3ZTE2Mjk0YThmZmRlNWM3Yzg1ZDIiLCJpYXQiOjE3MzQ4OTM2MDQsImV4cCI6MTczNDg5NzIwNH0.Jxt-YP1DsEvBes1EC8fryn2R2-1QykxZA1r2H3W41b0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"Krystina_Botsford@hotmail.com\",\r\n    \"password\":\"qwertyuiop\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/accepted-ride",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"accepted-ride"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Captain",
+					"item": [
+						{
+							"name": "Create Captain",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"capname\":\"prj\",\r\n    \"capemail\":\"captain{{$randomEmail}}\",\r\n    \r\n    \"password\":\"qwertyuiop\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/captain/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"captain",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYXBJZCI6IjY3NjgyMmVmZGJhYTg2NWNjYWFkNjFmZiIsImlhdCI6MTczNDg3NzkzNSwiZXhwIjoxNzM0ODgxNTM1fQ.Oe7VnVNu09PBgUkHvqIfmMdnNcTlrl249xmx9BIzLaM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/captain/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"captain",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get new ride",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYXBJZCI6IjY3NjgyMmVmZGJhYTg2NWNjYWFkNjFmZiIsImlhdCI6MTczNDg3NzkzNSwiZXhwIjoxNzM0ODgxNTM1fQ.Oe7VnVNu09PBgUkHvqIfmMdnNcTlrl249xmx9BIzLaM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/captain/wait-new-ride",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"captain",
+										"wait-new-ride"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"captainHermann75@gmail.com\",\r\n    \"password\":\"qwertyuiop\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Availability",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"Krystina_Botsford@hotmail.com\",\r\n    \"password\":\"qwertyuiop\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Accept Ride",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYXBJZCI6IjY3NjgyM2FmNjU5N2UyYTBkNTFlY2Q1NSIsImlhdCI6MTczNDg5NDQ2OCwiZXhwIjoxNzM0ODk4MDY4fQ.eTq5Rj84XNJ3JA7fb6MAMpJojaTfv7HGG7na_OWzrks",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/ride/accept-ride?rideId=67686418233a895b6b1f223d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ride",
+										"accept-ride"
+									],
+									"query": [
+										{
+											"key": "rideId",
+											"value": "67686418233a895b6b1f223d"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ride",
+					"item": [
+						{
+							"name": "Create New Ride",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY3ZTE2Mjk0YThmZmRlNWM3Yzg1ZDIiLCJpYXQiOjE3MzQ4OTQ1ODgsImV4cCI6MTczNDg5ODE4OH0.C9pmfoG0ba7qU57Gxvf-jyA-KZ0X29sN0rOikyyNoEA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pickup\":\"ulhasnagar\",\r\n    \"destination\":\"kalyan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/ride/create-ride",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"ride",
+										"create-ride"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
